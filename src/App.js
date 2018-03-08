@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
+
+
 
 class App extends Component {
   render() {
@@ -11,5 +14,14 @@ class App extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return state; 
+}
 
-export default App;
+const mapDispatchToProps = (state) => {
+  return {
+    dispatch: dispatch
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (App);
