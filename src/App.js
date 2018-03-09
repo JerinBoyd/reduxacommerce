@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-
+import ProductList from './ProductList';
 
 
 class App extends Component {
   render() {
     return (
       <div>
-        Hello!
+          <ProductList products={this.props.products} />
     
       </div>
     );
