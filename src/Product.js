@@ -10,10 +10,10 @@ const Product = props => {
         <p>{props.name}</p>
         <p>${props.price}</p>
         <button onClick={() => props.dispatch({type: 'ADD_ITEM', 
-                                                payload: { value: props.position}})}>+</button>
+                                payload: { value: props.position}})}>+</button>
         <p>{props.count}</p>
         <button onClick={() => props.dispatch({type: 'REMOVE_ITEM', 
-                                                payload: { value: props.position}})}>-</button>
+                                payload: { value: props.position}})}>-</button>
       </li> 
     );
   };
