@@ -1,4 +1,5 @@
-import * as types from './types';
+import * as types from "./types";
+import * as productActions from "./actions";
 
 const initialState = [
   {
@@ -23,7 +24,7 @@ const initialState = [
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.ADD_ITEM:{
+    case types.ADD_ITEM: {
       const position = action.payload.value;
       const selectedItem = state[position];
       const before = state.slice(0, position);
@@ -34,7 +35,7 @@ const reducer = (state = initialState, action) => {
       };
       return [...before, newProduct, ...after];
     }
-    case types.REMOVE_ITEM:{
+    case types.REMOVE_ITEM: {
       const position = action.payload.value;
       const selectedItem = state[position];
       const before = state.slice(0, position);
@@ -43,15 +44,12 @@ const reducer = (state = initialState, action) => {
         ...selectedItem,
         count: selectedItem.count === 0 ? 0 : selectedItem.count - 1
       };
-      return [...before, 
-             newProduct, 
-             ...after
-            ];
-  }
-     default:
+      return [...before, newProduct, ...after];
+    }
+    default:
       return state;
-}
-
+  }
 };
+export { productActions };
 
 export default reducer;
