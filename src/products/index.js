@@ -1,3 +1,5 @@
+import * as types from './types';
+
 const initialState = [
   {
     imgSrc: "https://via.placeholder.com/100x100",
@@ -21,7 +23,7 @@ const initialState = [
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_ITEM":{
+    case types.ADD_ITEM:{
       const position = action.payload.value;
       const selectedItem = state[position];
       const before = state.slice(0, position);
@@ -32,14 +34,14 @@ const reducer = (state = initialState, action) => {
       };
       return [...before, newProduct, ...after];
     }
-    case "REMOVE_ITEM":{
+    case types.REMOVE_ITEM:{
       const position = action.payload.value;
       const selectedItem = state[position];
       const before = state.slice(0, position);
       const after = state.slice(position + 1);
       const newProduct = {
         ...selectedItem,
-        count: selectedItem.count === 0 ? 0 : selectedItem.count + 1
+        count: selectedItem.count === 0 ? 0 : selectedItem.count - 1
       };
       return [...before, 
              newProduct, 
