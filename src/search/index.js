@@ -1,10 +1,11 @@
-
+import * as types from './types';
+import * as searchActions from './actions';
 
 const initialState = "";
 
 const reducer = (state=initialState, action) => {
     switch(action.type){
-        case 'UPDATE_SEARCH': {
+        case types.UPDATE_SEARCH: {
             const term = action.payload.value;
             return term;
         }
@@ -13,5 +14,8 @@ const reducer = (state=initialState, action) => {
     }
    
 };
+export {
+    searchActions
+}
 
 export default reducer;
