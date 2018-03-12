@@ -18,4 +18,5 @@ export {
     searchActions
 }
 
+
 export default reducer;
