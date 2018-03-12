@@ -11,14 +11,14 @@ const initialState = {
     price: 500.0,
     count: 0
   },
-  'ff6fdc7a-3fa1-45da-803c-b1eeedf44a05':
+  'ff6fdc7a-3fa1-45da-803c-b1eeedf44a06':
   {
     imgSrc: "https://via.placeholder.com/100x100",
     name: "Snail",
     price: 3.99,
     count: 0
   },
-  'ff6fdc7a-3fa1-45da-803c-b1eeedf44a05':
+  'ff6fdc7a-3fa1-45da-803c-b1eeedf44a07':
   {
     imgSrc: "https://via.placeholder.com/100x100",
     name: "Rug",
